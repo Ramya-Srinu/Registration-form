@@ -1,70 +1,59 @@
-<div class="center" style="font-family: Arial, Helvetica, sans-serif;color: #000;font-size: xx-large;">
-    <p>ADD YOUR PERSONAL DETAILS</p>
-</div>
-<div class="col s12">
-    <div class="row">
+<div class="card-panel" style="font-family: Arial, Helvetica, sans-serif; 
+    background-color:lemonchiffon;color: #000;  
+ font-size:large; min-height:500px;">
 
-        <label>Full Name</label><input type="text" style="color:red;box-shadow: 5px 5px 20px #0e2a7c;width: 50%;"
-            class="Input-text" [(ngModel)]="user.name" placeholder="Enter your Name" maxlength="15"><br>
+    <div class="center" style="font-family: Arial, Helvetica, sans-serif;color: #000;font-size: xx-large;">
 
-        <label>Gender</label><br>
-        <p>
-            <input id="male" type="radio" name="gender" value="male" [(ngModel)]="user.gender" checked />
-            <label for="male">Male</label>
-        </p>
+        <p>ADD YOUR PERSONAL DETAILS</p>
+    </div>
+    <div class="col s12">
+        <div class="row">
 
-        <p>
-            <input id="female" type="radio" name="gender" value="female" [(ngModel)]="user.gender" />
-            <label for="female">Female</label>
-        </p>
+            <label>Full Name</label><input type="text"
+                style="color:red;  padding: 12px 20px;box-shadow: 5px 5px 20px #0e2a7c;width: 50%;" class="Input-text"
+                [(ngModel)]="user.name" placeholder="Enter your Name" maxlength="15"><br>
 
-        <p>
-            <input id="other" type="radio" name="gender" value="other" [(ngModel)]="user.gender" />
-            <label for="other">Other</label>
-        </p>
+            <label>Gender</label><br>
+            <p>
+                <input id="male" type="radio" name="gender" value="male" [(ngModel)]="user.gender" checked />
+                <label for="male">Male</label>
+            </p>
 
-        <label for="country">Country</label>
-        <ng-select style="color:red;box-shadow: 5px 5px 20px #0e2a7c;width: 50%;" [items]="countries" bindLabel="name"
-            bindValue="name" [(ngModel)]="user.country"></ng-select><br>
-        <label for="state">State</label>
-        <ng-select style="color:red;box-shadow: 5px 5px 20px #0e2a7c;width: 50%;" [items]="states" bindLabel="name"
-            bindValue="name" [(ngModel)]="user.state"></ng-select><br>
+            <p>
+                <input id="female" type="radio" name="gender" value="female" [(ngModel)]="user.gender" />
+                <label for="female">Female</label>
+            </p>
+
+            <p>
+                <input id="other" type="radio" name="gender" value="other" [(ngModel)]="user.gender" />
+                <label for="other">Other</label>
+            </p>
+
+            <label for="country">Country</label>
+            <ng-select style="color:red;box-shadow: 5px 5px 20px #0e2a7c;width: 50%;" [items]="countries"
+                bindLabel="name" bindValue="name" [(ngModel)]="user.country"></ng-select><br>
+            <label for="state">State</label>
+            <ng-select style="color:red;box-shadow: 5px 5px 20px #0e2a7c;width: 50%;" [items]="states" bindLabel="name"
+                bindValue="name" [(ngModel)]="user.state"></ng-select><br>
 
 
-        <label>Phone</label><input type="text" style="color:red;box-shadow: 5px 5px 20px #0e2a7c;width: 50%;"
-            class="Input-text" [(ngModel)]="user.number" placeholder="Enter your Number" maxlength="15"><br>
+            <label>Phone</label><input type="text" style="color:red;box-shadow: 5px 5px 20px #0e2a7c;width: 50%;"
+                class="Input-text" [(ngModel)]="user.number" placeholder="Enter your Number" maxlength="15"><br>
 
 
 
-        <br>
-        <br>
+            <br>
+            <br>
 
+
+        </div>
+    </div>
+
+    <div class="column">
+
+        <a routerLink="/company" (click)="registerNow()" href="home/home.component.html" routerLinkActive="active">
+            Next</a>
 
     </div>
-</div>
-<div class="center" style="font-family: Arial, Helvetica, sans-serif;color: #000;font-size: xx-large;">
-    <p>ADD COMPANY DETAILS</p>
-</div>
-<div class="col s12">
-    <div class="row">
-        <label>Company Name</label><input type="text" style="color:red;box-shadow: 5px 5px 20px #0e2a7c;width: 50%;"
-            class="Input-text" [(ngModel)]="user.companyName" placeholder="Enter Company Name" maxlength="40"><br><br>
-        <label>Email Id</label><input type="text" style="color:red;box-shadow: 5px 5px 20px #0e2a7c;width: 50%;"
-            class="Input-text" [(ngModel)]="user.emailId" placeholder="Enter EmailId" maxlength="40"><br><br>
-        <label>Job Title</label><input type="text" style="color:red;box-shadow: 5px 5px 20px #0e2a7c;width: 50%;"
-            class="Input-text" [(ngModel)]="user.jobTitle" placeholder="Enter Jobtitle" maxlength="40"><br><br>
-        <label>Years of Experiance</label><input type="number"
-            style="color:red;box-shadow: 5px 5px 20px #0e2a7c;width: 50%;" class="Input-text"
-            [(ngModel)]="user.experiance" placeholder="Enter Jobtitle" maxlength="15"><br><br>
-    </div>
-</div>
-<div class="column">
 
-    <button type="button" (click)="registerNow()">Submit</button>&nbsp;
-
-
-
-</div>
-
-
-<br>
+    <br>

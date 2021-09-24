@@ -1,0 +1,33 @@
+<div class="card-panel" style="font-family: Arial, Helvetica, sans-serif; 
+    background-color:lemonchiffon;color: #000; 
+   font-size:large; min-height:500px;">
+    <div class="center" style="font-family: Arial, Helvetica, sans-serif;color: #000;font-size: xx-large;">
+        <p>ADD COMPANY DETAILS</p>
+    </div>
+    <div class="col s12">
+        <div class="row">
+
+            <label>Company Name</label><input type="text" style="color:red;box-shadow: 5px 5px 20px #0e2a7c;width: 50%;"
+                class="Input-text" [(ngModel)]="user.companyName" placeholder="Enter Company Name"
+                maxlength="40"><br><br>
+            <label>Email Id</label><input type="text" style="color:red;box-shadow: 5px 5px 20px #0e2a7c;width: 50%;"
+                class="Input-text" [(ngModel)]="user.emailId" placeholder="Enter EmailId" maxlength="40"><br><br>
+            <label>Job Title</label><input type="text" style="color:red;box-shadow: 5px 5px 20px #0e2a7c;width: 50%;"
+                class="Input-text" [(ngModel)]="user.jobTitle" placeholder="Enter Jobtitle" maxlength="40"><br><br>
+            <label>Years of Experiance</label><input type="number"
+                style="color:red;box-shadow: 5px 5px 20px #0e2a7c;width: 50%;" class="Input-text"
+                [(ngModel)]="user.experiance" placeholder="Enter Jobtitle" maxlength="15"><br><br>
+        </div>
+    </div>
+    <div class="column">
+
+
+        <a routerLink="/email" href="login/login.component.html" routerLinkActive="active">Next
+        </a>
+
+
+
+
+
+    </div>
+</div>

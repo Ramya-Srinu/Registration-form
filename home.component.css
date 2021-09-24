@@ -16,10 +16,10 @@ label{
   font-family: inherit;
   font-size: var(--inputFontSize);
   font-weight: inherit;
+  background-color: white;
   line-height: var(--inputLineHeight);
   border: none;
   border-radius: 0.4rem;
-  background-color:white;
   transition: box-shadow var(--transitionDuration);
 }
 .Input-text::placeholder {

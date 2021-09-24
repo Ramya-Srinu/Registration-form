@@ -6,6 +6,7 @@ import { NgxSmartModalService } from 'ngx-smart-modal';
 import { CompleterService, CompleterData } from 'ng2-completer';
 import { HttpClient } from '@angular/common/http';
 import { EmployeeService } from './employee.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -15,7 +16,7 @@ export class AppComponent implements OnInit {
 
 
 
-  constructor(private http: HttpClient, private fb: FormBuilder, private employeeService: EmployeeService, private notifyService: NotificationService, public ngxsmartservice: NgxSmartModalService, private completerService: CompleterService) {
+  constructor(private http: HttpClient, private router: Router, private fb: FormBuilder, private employeeService: EmployeeService, private notifyService: NotificationService, public ngxsmartservice: NgxSmartModalService, private completerService: CompleterService) {
 
   }
 

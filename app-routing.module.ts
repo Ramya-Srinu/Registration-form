@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CompanydetailComponent } from './companydetail/companydetail.component';
 
 import { EmployeedetailComponent } from './employeedetail/employeedetail.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 const routes: Routes = [
-
-  { path: "", redirectTo: "users", pathMatch: "full" },
-  { path: 'users', component: CompanydetailComponent }
+  { path: 'Employee', component: EmployeedetailComponent },
+  { path: 'company', component: HomeComponent },
+  { path: 'email', component: LoginComponent }
 
 ];
 

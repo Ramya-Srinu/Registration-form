@@ -10,4 +10,5 @@ export class User {
     experiance: any;
     number: any;
     emailId: any;
+    registerId: any;
 }

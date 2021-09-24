@@ -3,6 +3,7 @@ import { FormGroup, Validators } from '@angular/forms';
 import { NotificationService } from '../notification.service';
 import { User } from '../user';
 import { EmployeeService } from '../employee.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-employeedetail',
@@ -51,7 +52,8 @@ export class EmployeedetailComponent implements OnInit {
 
   ];
 
-  constructor(private notifyService: NotificationService, private employeeService: EmployeeService) { }
+  constructor(private notifyService: NotificationService, private employeeService: EmployeeService, private router: Router, private route:
+    ActivatedRoute) { }
   ngOnInit() {
 
   }
@@ -77,26 +79,14 @@ export class EmployeedetailComponent implements OnInit {
       == null) {
       this.notifyService.showError("Error !!", "PhoneNumber required");
     }
-    else if (this.user.companyName == null) {
-      this.notifyService.showError("Error !!", "CompanyName required");
-    }
-    else if (this.user.emailId == null && pattern(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
-      this.notifyService.showError("Error !!", "EmailId required");
-    }
-    else if (this.user.jobTitle == null) {
-      this.notifyService.showError("Error !!", "Job Title required");
-    }
-    else if (this.user.experiance == null) {
-      this.notifyService.showError("Error !!", "Years Of Experiance required");
-    }
-
 
     else {
       this.employeeService.doRegistration(this.user)
         .subscribe((data) => {
           debugger;
 
-
+          this.router.navigateByUrl('/company');
+          this.data = this.user.registerId;
           debugger;
 
 
@@ -105,8 +95,14 @@ export class EmployeedetailComponent implements OnInit {
         });
 
     }
-  }
 
+    if (this.submitted == true) {
+      this.notifyService.showSuccess("Success", "Submitted successfully");
+    }
+  }
+  btnClick() {
+    this.router.navigateByUrl('/company');
+  };
 
   showToasterError() {
     this.notifyService.showError("Error !!", "");
